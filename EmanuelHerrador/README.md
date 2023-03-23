@@ -12,8 +12,6 @@
 
  - http://www.webpagesthatsuck.com/
 
- - http://saludcba.com.ar/
-
 ## Formato PEP8
 
 Para seguir las condiciones de estilo de código pedidas por la cátedra, se ha realizado un script que formatea el código de python en PEP8 automáticamente en Visual Studio Code (cuando lo guardamos).
