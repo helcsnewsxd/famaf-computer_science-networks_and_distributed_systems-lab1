@@ -87,22 +87,13 @@ def connect_to_server(server_name):
     ConnectionRefusedError: [Errno 111] Connection refused
     """
 
-    # Buscar direccion ip
-    # COMPLETAR ABAJO DE ESTA LINEA
-    # Aqui deberian obtener la direccion ip del servidor y asignarla
-    # a ip_address
     ip_address = socket.gethostbyname(server_name)
-    # DEJAR LA LINEA SIGUIENTE TAL COMO ESTA
     sys.stderr.write("Contactando al servidor en %s...\n" % ip_address)
-    # Crear socket
-    # COMPLETAR ABAJO DE ESTA LINEA
     # AF_INET para conectarme a una address de IPv4
     # SOCK_STREAM para el protocolo TCP
     skt = socket.socket(socket.AF_INET, socket.SOCK_STREAM, -1, None)
-    # Aqui deben conectarse al puerto correcto del servidor
-    skt.connect((ip_address, 80))
+    skt.connect((ip_address, HTTP_PORT))
     return skt
-    # NO MODIFICAR POR FUERA DE ESTA FUNCION
 
 
 def send_request(connection, url):
